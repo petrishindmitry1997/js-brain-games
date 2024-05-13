@@ -10,9 +10,14 @@
   "author": "Dmitriy Petrishin",
   "license": "ISC",
   "dependencies": {
-    "make": "^0.8.1"
+    "make": "^0.0.0"
   },
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "eslint": "^9.2.0",
+    "globals": "^15.2.0"
   }
 }
