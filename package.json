@@ -13,7 +13,8 @@
     "make": "^0.0.0"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
