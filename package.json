@@ -1,5 +1,6 @@
 {
   "name": "@hexlet/code",
+  "type": "module",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/petrishindmitry1997/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/petrishindmitry1997/qa-auto-engineer-javascript-project-44/actions)",
   "main": "index.js",
@@ -7,5 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dmitriy Petrishin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "make": "^0.8.1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
