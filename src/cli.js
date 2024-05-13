@@ -1,42 +1,30 @@
-import readlineSync from "readline-sync"; 
-import * as even from "./even.js";
+import readlineSync from 'readline-sync';
 
+const roundsCount = 3;
 
-  
-export const welcomeRun = () => {
-    console.log('Welcome to the Brain Games!');
-    const askUserName = () => {
-        const userName = readlineSync.question('May I have your name? ');
-        return userName;
-      };
-    const user = askUserName();
-    console.log(`Hello, ${user}!\n`);
-};  
+const playGame = (rule, getQuestionAndAnswer) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
-export const getUserAnswer = (question) => {
+  console.log(rule);
+  let correctAnswersCount = 0;
+
+  while (correctAnswersCount < roundsCount) {
+    const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    return answer;
-  };
-  
-export const ask = (attempt = 1) => {
-    if (attempt > 3) {
-      console.log(`Congratulations, ${user}!`);
-      return null;
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (correctAnswer === userAnswer) {
+      console.log('Correct!');
+      correctAnswersCount += 1;
+    } else {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
+  }
+  console.log(`Congratulations, ${userName}!`);
+};
 
-    const qa = even.getQuestionAnswer();
-    const question = qa[0];
-    const correctAnswer = qa[1];
-    const userAnswer = getUserAnswer(question);
-
-    if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      console.log(`Let's try again, ${user}!`);
-      return null;
-    }
-    console.log('Correct!');
-    return ask(attempt + 1);
-  };
-
-  ask();
+export default playGame;

@@ -1,27 +1,18 @@
-import { welcomeRun } from '..';
+const maxNum = 100;
+const minNum = 0;
 
-export const getRandomNumber = (num) => {
-    return Math.floor(Math.random() * num);
+export const getRandomNumber = (minNum,
+  maxNum) => Math.floor(Math.random() * maxNum) + minNum;
+
+
+
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+export const isEvenNumber = (num) => {
+    num % 2 === 0;
 };
-export const isEven = (number) => {
-    if (number % 2 === 0) {
-        return true
-    } else {
-        return false
-    };
-};
-
-const phrase = 'Answer "yes" if number even, otherwise answer "no".';
-
-const getQuestionAnswer = () => {
-  const question = getRandomNumber(10000);
-  let answer;
-  if (isEven(question)) {
-    answer = 'yes';
-  } else {
-    answer = 'no';
-  }
+export const getQuestionAndAnswer = () => {
+  const question = getRandomNumber();
+  const answer = isEvenNumber(question) ? 'yes' : 'no';
   return [question, answer];
 };
-
-export default () => welcomeRun(phrase, getQuestionAnswer);

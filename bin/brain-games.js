@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { welcomeRun } from "..src/cli.js";
+import { playGame } from "..src/cli.js";
 
-welcomeRun();
+playGame();
