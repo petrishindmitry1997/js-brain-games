@@ -1,3 +1,5 @@
+import playGame from '../index.js';
+
 const maxNum = 100;
 const minNum = 0;
 
@@ -16,3 +18,9 @@ export const getQuestionAndAnswer = () => {
   const answer = isEvenNumber(question) ? 'yes' : 'no';
   return [question, answer];
 };
+
+const playGameEven = () => {
+  playGame(rule, getQuestionAndAnswer);
+};
+
+export default playGameEven;
