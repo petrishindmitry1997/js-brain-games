@@ -22,7 +22,7 @@ export const getQuestionAndAnswer = () => {
   const operation = operations[getRandomNumber(0, 2)];
   const question = `${num1} ${operation} ${num2}`;
   const answer = getCorrectAnswer(num1, num2, operation);
-  return [question, String(answer)];
+  return [question, answer];
 };
 
 const playGameCalc = () => {
