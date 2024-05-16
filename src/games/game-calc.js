@@ -1,10 +1,10 @@
 import getRandomNumber from 'game-even.js';
 import playGame from '../index.js';
 
-const rule = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
-export const getCorrectAnswer = (num1, num2, operation) => {
+export const getOperation = (num1, num2, operation) => {
   let answer = 0;
   if (operation === '+') {
     answer = num1 + num2;
@@ -13,6 +13,7 @@ export const getCorrectAnswer = (num1, num2, operation) => {
   } else if (operation === '*') {
     answer = num1 * num2;
   };
+
   return answer;
 };
 
@@ -21,12 +22,13 @@ export const getQuestionAndAnswer = () => {
   const num2 = getRandomNumber();
   const operation = operations[getRandomNumber(0, 2)];
   const question = `${num1} ${operation} ${num2}`;
-  const answer = getCorrectAnswer(num1, num2, operation);
+  const answer = getOperation(num1, num2, operation);
+  
   return [question, answer];
 };
 
 const playGameCalc = () => {
-  playGame(rule, getQuestionAndAnswer);
+  playGame(task, getQuestionAndAnswer);
 };
 
 export default playGameCalc;

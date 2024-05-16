@@ -1,18 +1,20 @@
 import getRandomNumber from 'game-even.js';
 import playGame from '../index.js';
 
-const lengthProgression = 10;
+const task = 'What number is missing in the progression?';
 
-const rule = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const getQuestionAndAnswer = () => {
     const firstNum = getRandomNumber();
-    const diffProgression = getRandomNumber(1, 10);
-    const hiddenNum = getRandomNumber(0, lengthProgression);
+    const progressionDiff = getRandomNumber(1, 10);
+    const hiddenNum = getRandomNumber(0, progressionLength);
     const progression = [];
-    for (let i = 0; i < lengthProgression; i++) {
-      progression.push(firstNum + diffProgression * i);
-    }
+
+    for (let i = 0; i < progressionLength; i++) {
+      progression.push(firstNum + progressionDiff * i);
+    };
+
     const question = progression.join(' ');
     const answer = progression[hiddenNum];
     progression[hiddenNum] = '..';
@@ -21,7 +23,7 @@ const getQuestionAndAnswer = () => {
   };
   
   const playGameProgression = () => {
-    playGame(rule, getQuestionAndAnswer);
+    playGame(task, getQuestionAndAnswer);
   };
   
   export default playGameProgression;
