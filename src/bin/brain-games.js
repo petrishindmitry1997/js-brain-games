@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import introduction from "../intro.js";
+import introduction from "..";
 
 introduction();
