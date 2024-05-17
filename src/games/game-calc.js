@@ -1,4 +1,4 @@
-import getRandomNumber from 'game-even.js';
+import getRandomNumber from '../getRN.js';
 import playGame from '../index.js';
 
 const task = 'What is the result of the expression?';

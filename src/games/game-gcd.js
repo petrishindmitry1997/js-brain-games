@@ -1,4 +1,4 @@
-import getRandomNumber from 'brain-even.js';
+import getRandomNumber from '../getRN.js';
 import playGame from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
