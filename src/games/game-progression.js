@@ -5,7 +5,7 @@ const task = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 
-const getQuestionAndAnswer = () => {
+export const getQuestionAndAnswer = () => {
     const firstNum = getRandomNumber();
     const progressionDiff = getRandomNumber(1, 10);
     const hiddenNum = getRandomNumber(0, progressionLength);

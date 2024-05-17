@@ -3,7 +3,7 @@ import playGame from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrimeNumber = (num) => {
+export const isPrimeNumber = (num) => {
   if (num <= 1) return false;
   for (let i = 2; i < num / 2; i++) {
     if (num % i === 0) return false;
@@ -12,7 +12,7 @@ const isPrimeNumber = (num) => {
   return true;
 };
 
-const getQuestionAndAnswer = () => {
+export const getQuestionAndAnswer = () => {
   const question = getRandomNumber();
   const answer = isPrimeNumber(question) ? 'yes' : 'no';
 

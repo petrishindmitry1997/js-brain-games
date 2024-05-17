@@ -3,7 +3,7 @@ import playGame from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (num1, num2) => {
+export const getGcd = (num1, num2) => {
   const minNum = num1 > num2 ? num2 : num1;
   let gcd = 1;
   for (let i = 2; i <= minNum; i++) {
@@ -13,7 +13,7 @@ const getGcd = (num1, num2) => {
   return gcd;
 };
 
-const getQuestionAndAnswer = () => {
+export const getQuestionAndAnswer = () => {
   const num1 = getRandomNumber();
   const num2 = getRandomNumber();
   const question = `${num1} ${num2}`;
