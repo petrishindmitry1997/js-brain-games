@@ -6,7 +6,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/9ba7608f0bfe9ed1442d/maintainability)](https://codeclimate.com/github/petrishindmitry1997/qa-auto-engineer-javascript-project-44/maintainability)
 
 ### Brain-Games:
-This is a set of logical mini-games launched from the console. List of games: Game: "Calculator" Game: "Parity Check" Game "Is it a prime number?" Game "Arithmetic Progression.
+This is a set of logical mini-games launched from the console. List of games: Game: "Calculator", Game: "Even", Game "Prime number", Game "Progression", Game: "GCD".
 
 ### To install the package you need:
 - clone repositories
@@ -69,7 +69,7 @@ Your answer: 18 21 33
 Correct!
 ```
 
-### Game "Whether number is prime?"
+### Game "Prime number"
 ```
 Answer "yes" if number prime otherwise answer "no".
 Question: 127

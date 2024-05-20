@@ -16,7 +16,7 @@ export const getQuestionAndAnswer = () => {
   const question = getRandomNumber();
   const answer = isPrimeNumber(question) ? 'yes' : 'no';
 
-  return [question, answer];
+  return [question, String(answer)];
 };
 
 const playGamePrime = () => {
