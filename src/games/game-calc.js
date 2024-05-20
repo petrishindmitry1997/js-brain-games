@@ -24,7 +24,7 @@ export const getQuestionAndAnswer = () => {
   const question = `${num1} ${operation} ${num2}`;
   const answer = getOperation(num1, num2, operation);
   
-  return [question, answer];
+  return [question, String(answer)];
 };
 
 const playGameCalc = () => {

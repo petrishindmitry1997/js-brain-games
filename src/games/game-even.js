@@ -11,7 +11,7 @@ export const getQuestionAndAnswer = () => {
   const question = getRandomNumber();
   const answer = isEvenNumber(question) ? 'yes' : 'no';
 
-  return [question, answer];
+  return [question, String(answer)];
 };
 
 const playGameEven = () => {

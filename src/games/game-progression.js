@@ -19,7 +19,7 @@ export const getQuestionAndAnswer = () => {
     const answer = progression[hiddenNum];
     progression[hiddenNum] = '..';
     
-    return [question, answer];
+    return [question, String(answer)];
   };
   
   const playGameProgression = () => {

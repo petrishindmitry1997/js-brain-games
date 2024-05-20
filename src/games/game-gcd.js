@@ -19,7 +19,7 @@ export const getQuestionAndAnswer = () => {
   const question = `${num1} ${num2}`;
   const answer = getGcd(num1, num2);
   
-  return [question, answer];
+  return [question, String(answer)];
 };
 
 const playGameGcd = () => {
