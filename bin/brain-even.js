@@ -3,4 +3,3 @@
 import playGameEven from '../src/games/game-even.js';
 
 playGameEven();
-
