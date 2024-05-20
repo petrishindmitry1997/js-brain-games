@@ -15,9 +15,9 @@ export const getQuestionAndAnswer = () => {
       progression.push(firstNum + progressionDiff * i);
     };
 
-    const question = progression.join(' ');
     const answer = progression[hiddenNum];
     progression[hiddenNum] = '..';
+    const question = progression.join(' ');
     
     return [question, String(answer)];
   };
