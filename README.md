@@ -15,7 +15,7 @@ This is a set of logical mini-games launched from the console. List of games: Ga
 
 ### Game "Even number check"
 ```
-Answer "yes" if number even otherwise answer "no".
+Answer "yes" if the number is even, otherwise answer "no".
 Question: 47
 Your answer: no
 Correct!
@@ -57,7 +57,7 @@ Correct!
 
 ### Game "Progression"
 ```
-What numbers are missing in this progression?
+What number is missing in the progression?
 22 32 42 .. .. 72 82 .. 102 112
 Your answer: 52 62 92
 Correct!
@@ -71,7 +71,7 @@ Correct!
 
 ### Game "Prime number"
 ```
-Answer "yes" if number prime otherwise answer "no".
+Answer "yes" if given number is prime. Otherwise answer "no".
 Question: 127
 Your answer: yes
 Correct!
