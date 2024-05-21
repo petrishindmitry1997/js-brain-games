@@ -7,7 +7,7 @@ const playGame = (task, getQuestionAndAnswer) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(task);
-  
+
   let correctAnswersCount = 0;
   while (correctAnswersCount < roundsCount) {
     const [question, correctAnswer] = getQuestionAndAnswer();

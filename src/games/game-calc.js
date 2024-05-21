@@ -12,7 +12,7 @@ export const getOperation = (num1, num2, operation) => {
     answer = num1 - num2;
   } else if (operation === '*') {
     answer = num1 * num2;
-  };
+  }
 
   return answer;
 };
@@ -23,7 +23,7 @@ export const getQuestionAndAnswer = () => {
   const operation = operations[getRandomNumber(0, 2)];
   const question = `${num1} ${operation} ${num2}`;
   const answer = getOperation(num1, num2, operation);
-  
+
   return [question, String(answer)];
 };
 
