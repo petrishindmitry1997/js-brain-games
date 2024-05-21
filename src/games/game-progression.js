@@ -25,5 +25,5 @@ export const getQuestionAndAnswer = () => {
 const playGameProgression = () => {
   playGame(task, getQuestionAndAnswer);
 };
-  
+
 export default playGameProgression;
