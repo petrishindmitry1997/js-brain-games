@@ -8,6 +8,7 @@ const generateProgression = (firstNum, progressionDiff, progressionLength) => {
   for (let i = 0; i < progressionLength; i += 1) {
     progression.push(firstNum + progressionDiff * i);
   }
+
   return progression;
 };
 

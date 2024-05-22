@@ -10,6 +10,7 @@ export const getOperation = (num1, num2, operation) => {
     '-': num1 - num2,
     '*': num1 * num2,
   };
+
   return expressions[operation];
 };
 
