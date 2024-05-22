@@ -5,12 +5,12 @@ const task = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
 export const getOperation = (num1, num2, operation) => {
-  const operations = {
+  const expressions = {
     '+': num1 + num2,
     '-': num1 - num2,
     '*': num1 * num2,
   };
-  return operations[operation];
+  return expressions[operation];
 };
 
 export const getQuestionAndAnswer = () => {
